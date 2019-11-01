@@ -24,23 +24,9 @@ extension RepositoriesModuleInteractor: RepositoriesModulePresenterToInteractor 
             case let .success(repositories):
                 self.interactorToPresenterProtocol.fetched(repositories: repositories.items)
             case let .failure(error):
-                self.interactorToPresenterProtocol.failedToFetchRecipes(error: error)
+                self.interactorToPresenterProtocol.failedToFetchRepositories(error: error)
             }
         }
-//        networkLayer.getRecipes { (data, _, error) in
-//            if let responseData = data {
-//                let decoder = JSONDecoder()
-//                do {
-//                    let recipes = try decoder.decode(Recipes.self, from: responseData)
-//                    self.interactorToPresenterProtocol.recipesFetched(recipes: recipes)
-//                } catch {
-//                    print("error trying to convert data to JSON")
-//                    self.interactorToPresenterProtocol.failedToFetchRecipes(error: error)
-//                }
-//            } else {
-//                self.interactorToPresenterProtocol.failedToFetchRecipes(error: error!)
-//            }
-//        }
     }
 
 }

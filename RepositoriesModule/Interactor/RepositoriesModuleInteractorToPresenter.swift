@@ -10,5 +10,5 @@ import Entities
 
 protocol RepositoriesModuleInteractorToPresenter: class {
     func fetched(repositories: [Repository])
-    func failedToFetchRecipes(error: Error)
+    func failedToFetchRepositories(error: Error)
 }

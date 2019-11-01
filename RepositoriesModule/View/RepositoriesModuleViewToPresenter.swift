@@ -10,6 +10,6 @@ import Entities
 
 protocol RepositoriesModuleViewToPresenter {
     func viewIsReady()
-    func showDetailsScreen(for repository: Repository)
+    func showRepositoryDetailsScreen(_ repository: Repository, from view: RepositoriesModulePresenterToView)
 }
 

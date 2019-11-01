@@ -24,8 +24,10 @@ final class RepositoriesModuleViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "Swift Public Repos"
         viewToPresenterProtocol.viewIsReady()
+        title = "Swift Public Repos"
+        tableView.dataSource = self
+        tableView.delegate = self
     }
 
 }
@@ -38,7 +40,9 @@ extension RepositoriesModuleViewController: RepositoriesModulePresenterToView {
     }
 
     func showErrorMessage() {
-        let alert = UIAlertController(title: "Alert", message: "Problem Fetching recipes", preferredStyle: UIAlertController.Style.alert)
+        let alert = UIAlertController(title: "Alert",
+                                      message: "Problem Fetching recipes",
+                                      preferredStyle: UIAlertController.Style.alert)
         alert.addAction(UIAlertAction(title: "Okay", style: UIAlertAction.Style.default, handler: nil))
         self.present(alert, animated: true, completion: nil)
     }
@@ -53,11 +57,20 @@ extension RepositoriesModuleViewController: UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "PublicSwiftRepoCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "RepositoryCell", for: indexPath)
         let repository = repositories[indexPath.row]
         cell.textLabel?.text = repository.name
         cell.detailTextLabel?.text = repository.full_name
         return cell
+    }
+
+}
+
+// MARK: - Table view delegate
+
+extension RepositoriesModuleViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        viewToPresenterProtocol.showRepositoryDetailsScreen(repositories[indexPath.row], from: self)
     }
 
 }

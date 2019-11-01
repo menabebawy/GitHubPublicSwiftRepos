@@ -7,11 +7,18 @@
 //
 
 import Entities
+import UIKit
 
-final class RepositoriesModuleRouter: RepositoriesModulePresenterToRouter {
+final class RepositoriesModuleRouter {
+}
 
-    func openRecipeDetailsScreen(with repository: Repository) {
-        
+// MARK: - Repositories module presenter to router
+
+extension RepositoriesModuleRouter: RepositoriesModulePresenterToRouter {
+    func openRepositoryDetailsScreen(_ repository: Repository, from view: RepositoriesModulePresenterToView) {
+        guard let view = view as? RepositoriesModuleViewController else { return }
+        let repositoryRouter = RepositoryModuleRouter()
+        repositoryRouter.push(from: view, repository: repository)
     }
 
 }

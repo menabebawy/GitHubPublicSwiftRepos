@@ -17,7 +17,7 @@ final class RepositoriesModuleConfigurator {
     }
 
     private func configure(viewController: RepositoriesModuleViewController) {
-        let router = RepositoriesModuleRouter()
+       let router = RepositoriesModuleRouter()
 
         let presenter = RepositoriesModulePresenter()
         presenter.view = viewController

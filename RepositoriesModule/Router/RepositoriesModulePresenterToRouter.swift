@@ -9,5 +9,5 @@
 import Entities
 
 protocol RepositoriesModulePresenterToRouter {
-    func openRecipeDetailsScreen(with repository: Repository)
+    func openRepositoryDetailsScreen(_ repository: Repository, from view: RepositoriesModulePresenterToView)
 }

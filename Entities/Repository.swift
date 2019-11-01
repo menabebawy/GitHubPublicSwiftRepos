@@ -14,6 +14,6 @@ public struct Repository: Codable {
     public let full_name: String
     public let size: Int
     public let forks_count: Int
-    public let stargazers_url: String
+    public let stargazers_count: Int
     public let contributors_url: String
 }

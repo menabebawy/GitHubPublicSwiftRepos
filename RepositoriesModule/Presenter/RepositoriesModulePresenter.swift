@@ -14,23 +14,27 @@ final class RepositoriesModulePresenter {
     var router: RepositoriesModulePresenterToRouter!
 }
 
+// MARK: - Repositories module view to presenter
+
 extension RepositoriesModulePresenter: RepositoriesModuleViewToPresenter {
-    func viewIsReady() {
+   func viewIsReady() {
         interactor.fetchRepositories()
     }
 
-    func showDetailsScreen(for repository: Repository) {
-        router.openRecipeDetailsScreen(with: repository)
-    }
+    func showRepositoryDetailsScreen(_ repository: Repository, from view: RepositoriesModulePresenterToView) {
+           router.openRepositoryDetailsScreen(repository, from: view)
+       }
 
 }
+
+// MARK: - Repositories module interactor to presenter
 
 extension RepositoriesModulePresenter: RepositoriesModuleInteractorToPresenter {
     func fetched(repositories: [Repository]) {
         view.showRepositories(repositories: repositories)
     }
 
-    func failedToFetchRecipes(error: Error) {
+    func failedToFetchRepositories(error: Error) {
         view.showErrorMessage()
     }
 
