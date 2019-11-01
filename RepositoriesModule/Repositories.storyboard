@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="MCg-5z-pLU">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Repositories Module View Controller-->
+        <scene sceneID="tDH-Da-1QH">
+            <objects>
+                <viewController storyboardIdentifier="RepositoriesViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="MCg-5z-pLU" customClass="RepositoriesModuleViewController" customModule="RepositoriesModule" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="KaH-rC-dhT">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="70" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="oEr-5w-FaT">
+                                <rect key="frame" x="0.0" y="44" width="414" height="852"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="PublicSwiftRepoCell" textLabel="fIn-V7-WfI" detailTextLabel="aQX-5C-SPN" style="IBUITableViewCellStyleSubtitle" id="E2D-lg-JE9">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="70"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="E2D-lg-JE9" id="Juu-Ps-vzy">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="70"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="fIn-V7-WfI">
+                                                    <rect key="frame" x="20" y="15" width="33.5" height="20.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="aQX-5C-SPN">
+                                                    <rect key="frame" x="20" y="38.5" width="44" height="14.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="MCg-5z-pLU" id="ew9-bq-fYg"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="oEr-5w-FaT" secondAttribute="bottom" id="8KU-aj-aMi"/>
+                            <constraint firstItem="oEr-5w-FaT" firstAttribute="top" secondItem="NiL-Q8-aFd" secondAttribute="top" id="Jrt-PW-3FS"/>
+                            <constraint firstItem="NiL-Q8-aFd" firstAttribute="trailing" secondItem="oEr-5w-FaT" secondAttribute="trailing" id="RZN-dO-Sqq"/>
+                            <constraint firstItem="oEr-5w-FaT" firstAttribute="leading" secondItem="NiL-Q8-aFd" secondAttribute="leading" id="t3S-D1-2uI"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="NiL-Q8-aFd"/>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="oEr-5w-FaT" id="MtC-n7-DA5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YR8-sm-g28" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <customObject id="Sbd-5r-WbZ" customClass="RepositoriesModuleInitalizer" customModule="RepositoriesModule">
+                    <connections>
+                        <outlet property="repositoriesModuleViewController" destination="MCg-5z-pLU" id="PgY-od-g7V"/>
+                    </connections>
+                </customObject>
+            </objects>
+            <point key="canvasLocation" x="-191.30434782608697" y="87.723214285714278"/>
+        </scene>
+    </scenes>
+</document>
