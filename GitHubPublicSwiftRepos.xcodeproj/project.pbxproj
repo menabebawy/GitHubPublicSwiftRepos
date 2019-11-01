@@ -66,14 +66,10 @@
 		6A703CCE236CCEC300945A08 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 6A703CCD236CCEC300945A08 /* Kingfisher */; };
 		6A703CD0236CCEDC00945A08 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 6A703CCF236CCEDC00945A08 /* Kingfisher */; };
 		6A97CB2D2369F07C0088DB1B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A97CB2C2369F07C0088DB1B /* SceneDelegate.swift */; };
-		6A97CB3E2369FBF70088DB1B /* OwnersCollectionViewSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A97CB3D2369FBF70088DB1B /* OwnersCollectionViewSource.swift */; };
-		6A97CB422369FCD50088DB1B /* OwnerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A97CB402369FCD50088DB1B /* OwnerCollectionViewCell.swift */; };
-		6A97CB432369FCD50088DB1B /* OwnerCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6A97CB412369FCD50088DB1B /* OwnerCollectionViewCell.xib */; };
 		6A9DF4E02368BA8900A09262 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A9DF4DF2368BA8900A09262 /* AppDelegate.swift */; };
 		6A9DF4E72368BA8900A09262 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6A9DF4E52368BA8900A09262 /* Main.storyboard */; };
 		6A9DF4E92368BA8E00A09262 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6A9DF4E82368BA8E00A09262 /* Assets.xcassets */; };
 		6A9DF4EC2368BA8E00A09262 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6A9DF4EA2368BA8E00A09262 /* LaunchScreen.storyboard */; };
-		6A9E01B1236A026F00474B09 /* PublicSwiftReposViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A9E01B0236A026F00474B09 /* PublicSwiftReposViewModel.swift */; };
 		6AB2319E236C60F20036D147 /* RepositoryModule.h in Headers */ = {isa = PBXBuildFile; fileRef = 6AB2319C236C60F20036D147 /* RepositoryModule.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6AB231A1236C60F20036D147 /* RepositoryModule.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6AB2319A236C60F20036D147 /* RepositoryModule.framework */; };
 		6AB231A2236C60F20036D147 /* RepositoryModule.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6AB2319A236C60F20036D147 /* RepositoryModule.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -250,16 +246,12 @@
 		6A703CC7236CCAE400945A08 /* ContributorCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ContributorCollectionViewCell.xib; sourceTree = "<group>"; };
 		6A97CB2C2369F07C0088DB1B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		6A97CB312369F5180088DB1B /* Owner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Owner.swift; sourceTree = "<group>"; };
-		6A97CB3D2369FBF70088DB1B /* OwnersCollectionViewSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OwnersCollectionViewSource.swift; sourceTree = "<group>"; };
-		6A97CB402369FCD50088DB1B /* OwnerCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OwnerCollectionViewCell.swift; sourceTree = "<group>"; };
-		6A97CB412369FCD50088DB1B /* OwnerCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OwnerCollectionViewCell.xib; sourceTree = "<group>"; };
 		6A9DF4DC2368BA8900A09262 /* GitHubPublicSwiftRepos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GitHubPublicSwiftRepos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6A9DF4DF2368BA8900A09262 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6A9DF4E62368BA8900A09262 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6A9DF4E82368BA8E00A09262 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6A9DF4EB2368BA8E00A09262 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6A9DF4ED2368BA8E00A09262 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		6A9E01B0236A026F00474B09 /* PublicSwiftReposViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublicSwiftReposViewModel.swift; sourceTree = "<group>"; };
 		6A9E01BB236A115600474B09 /* Repositories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repositories.swift; sourceTree = "<group>"; };
 		6A9E01C1236A2F8700474B09 /* RepositoriesModuleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepositoriesModuleViewController.swift; sourceTree = "<group>"; };
 		6AB2319A236C60F20036D147 /* RepositoryModule.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RepositoryModule.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -464,16 +456,6 @@
 			path = Entities;
 			sourceTree = "<group>";
 		};
-		6A97CB3F2369FC8D0088DB1B /* Owner */ = {
-			isa = PBXGroup;
-			children = (
-				6A97CB3D2369FBF70088DB1B /* OwnersCollectionViewSource.swift */,
-				6A97CB402369FCD50088DB1B /* OwnerCollectionViewCell.swift */,
-				6A97CB412369FCD50088DB1B /* OwnerCollectionViewCell.xib */,
-			);
-			path = Owner;
-			sourceTree = "<group>";
-		};
 		6A9DF4D32368BA8900A09262 = {
 			isa = PBXGroup;
 			children = (
@@ -506,8 +488,6 @@
 				6A97CB2C2369F07C0088DB1B /* SceneDelegate.swift */,
 				6A9DF4EA2368BA8E00A09262 /* LaunchScreen.storyboard */,
 				6A9DF4E52368BA8900A09262 /* Main.storyboard */,
-				6A9E01B0236A026F00474B09 /* PublicSwiftReposViewModel.swift */,
-				6A97CB3F2369FC8D0088DB1B /* Owner */,
 				6A9DF4E82368BA8E00A09262 /* Assets.xcassets */,
 				6A9DF4ED2368BA8E00A09262 /* Info.plist */,
 			);
@@ -819,7 +799,6 @@
 			files = (
 				6A540FC1236C4037001A87FB /* Repositories.storyboard in Resources */,
 				6A9DF4EC2368BA8E00A09262 /* LaunchScreen.storyboard in Resources */,
-				6A97CB432369FCD50088DB1B /* OwnerCollectionViewCell.xib in Resources */,
 				6A9DF4E92368BA8E00A09262 /* Assets.xcassets in Resources */,
 				6A703CCC236CCAF300945A08 /* ContributorCollectionViewCell.xib in Resources */,
 				6A703CC4236CC40600945A08 /* ContributorsTableViewCell.xib in Resources */,
@@ -907,9 +886,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				6A97CB2D2369F07C0088DB1B /* SceneDelegate.swift in Sources */,
-				6A97CB3E2369FBF70088DB1B /* OwnersCollectionViewSource.swift in Sources */,
-				6A97CB422369FCD50088DB1B /* OwnerCollectionViewCell.swift in Sources */,
-				6A9E01B1236A026F00474B09 /* PublicSwiftReposViewModel.swift in Sources */,
 				6A9DF4E02368BA8900A09262 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
