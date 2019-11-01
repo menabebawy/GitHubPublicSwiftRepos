@@ -9,6 +9,5 @@
 import Foundation
 
 protocol RepositoryModuleViewToPresenter {
-    func viewIsReady()
     func showContributors(fullName: String)
 }

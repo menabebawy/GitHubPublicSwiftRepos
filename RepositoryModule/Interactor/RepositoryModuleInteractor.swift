@@ -21,7 +21,6 @@ extension RepositoryModuleInteractor: RepositoryModulePresenterToInteractor {
         let service = GitHubService.contributors(fullname: fullName)
         sessionProvider.request(type: [Owner].self, service: service) { [weak self] response in
             guard let `self` = self else { return }
-
             switch response {
             case let .success(contributors):
                 self.interactorToPresenterProtocol.fetched(contributors: contributors)

@@ -17,11 +17,8 @@ final class RepositoryModulePresenter {
 // MARK: - Repositories module view to presenter
 
 extension RepositoryModulePresenter: RepositoryModuleViewToPresenter {
-    func viewIsReady() {
-//        interactor.fetchRepositories()
-    }
-
     func showContributors(fullName: String) {
+        interactor.fetchContributors(forRepositoryFullName: fullName)
     }
 
 }
@@ -30,7 +27,7 @@ extension RepositoryModulePresenter: RepositoryModuleViewToPresenter {
 
 extension RepositoryModulePresenter: RepositoryModuleInteractorToPresenter {
     func fetched(contributors: [Owner]) {
-        
+        view.showContributors(contributors)
     }
 
     func failedToFetchRepositories(error: Error) {
