@@ -17,8 +17,8 @@ final class RepositoriesModuleInteractor {
 // MARK: - Repositories module presenter to interactor
 
 extension RepositoriesModuleInteractor: RepositoriesModulePresenterToInteractor {
-    func fetchRepositories() {
-        let service = GitHubService.repositories(pageIndex: 1)
+    func fetchRepositories(pageIndex: Int, perPage: Int) {
+        let service = GitHubService.repositories(pageIndex: pageIndex, perPage: perPage)
         sessionProvider.request(type: Repositories.self, service: service) { response in
             switch response {
             case let .success(repositories):

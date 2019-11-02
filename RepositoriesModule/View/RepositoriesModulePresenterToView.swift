@@ -9,6 +9,7 @@
 import Entities
 
 protocol RepositoriesModulePresenterToView: class {
-    func showRepositories(repositories: [Repository])
+    func reloadTableView(by repositories: [Repository])
+    func updateTableView(by repositories: [Repository], perPage: Int)
     func showErrorMessage()
 }

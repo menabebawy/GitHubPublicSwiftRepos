@@ -9,5 +9,5 @@
 import Foundation
 
 protocol RepositoriesModulePresenterToInteractor {
-    func fetchRepositories()
+    func fetchRepositories(pageIndex: Int, perPage: Int)
 }

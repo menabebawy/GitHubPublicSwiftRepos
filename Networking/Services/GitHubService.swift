@@ -11,7 +11,7 @@ import Foundation
 public enum GitHubService: ServiceProtocol {
 
     case repository(id: Int)
-    case repositories(pageIndex: Int)
+    case repositories(pageIndex: Int, perPage: Int)
     case contributors(fullname: String)
 
     public var baseURL: URL {
@@ -37,11 +37,11 @@ public enum GitHubService: ServiceProtocol {
         switch self {
         case .repository:
             return .requestPlain
-        case .repositories(let pageIndex):
+        case .repositories(let pageIndex, let perPage):
             let parameters: KeyValuePairs<String, Any> = ["q": "is:public+language:swift",
                                                           "sort": "stars",
                                                           "order": "desc",
-                                                          "per_page": 25,
+                                                          "per_page": perPage,
                                                           "page": pageIndex,
                                                           "rel": "next"]
             return .requestParameters(parameters)

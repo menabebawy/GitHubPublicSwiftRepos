@@ -46,6 +46,8 @@
                                 </prototypes>
                                 <connections>
                                     <outlet property="dataSource" destination="MCg-5z-pLU" id="ew9-bq-fYg"/>
+                                    <outlet property="delegate" destination="MCg-5z-pLU" id="DYG-28-FCg"/>
+                                    <outlet property="prefetchDataSource" destination="MCg-5z-pLU" id="8HO-vf-ncD"/>
                                 </connections>
                             </tableView>
                         </subviews>

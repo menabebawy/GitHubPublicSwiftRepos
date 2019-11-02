@@ -10,20 +10,26 @@ import Entities
 
 final class RepositoriesModulePresenter {
     weak var view: RepositoriesModulePresenterToView!
+
     var interactor: RepositoriesModulePresenterToInteractor!
     var router: RepositoriesModulePresenterToRouter!
+
+    var pageIndex = 0
+    let perPage = 25
+
 }
 
 // MARK: - Repositories module view to presenter
 
 extension RepositoriesModulePresenter: RepositoriesModuleViewToPresenter {
-   func viewIsReady() {
-        interactor.fetchRepositories()
+    func fetchRepositories() {
+        pageIndex += 1
+        interactor.fetchRepositories(pageIndex: pageIndex, perPage: perPage)
     }
 
     func showRepositoryDetailsScreen(_ repository: Repository, from view: RepositoriesModulePresenterToView) {
-           router.openRepositoryDetailsScreen(repository, from: view)
-       }
+        router.openRepositoryDetailsScreen(repository, from: view)
+    }
 
 }
 
@@ -31,7 +37,7 @@ extension RepositoriesModulePresenter: RepositoriesModuleViewToPresenter {
 
 extension RepositoriesModulePresenter: RepositoriesModuleInteractorToPresenter {
     func fetched(repositories: [Repository]) {
-        view.showRepositories(repositories: repositories)
+        pageIndex == 1 ? view.reloadTableView(by: repositories) : view.updateTableView(by: repositories, perPage: perPage)
     }
 
     func failedToFetchRepositories(error: Error) {
