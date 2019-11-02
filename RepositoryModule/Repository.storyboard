@@ -10,7 +10,7 @@
         <!--Repository Module View Controller-->
         <scene sceneID="GoS-rg-YXc">
             <objects>
-                <tableViewController storyboardIdentifier="RepositoryModuleTableViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="fQ4-6F-Dfg" customClass="RepositoryModuleTableViewController" customModule="RepositoriesModule" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="RepositoryModuleTableViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="fQ4-6F-Dfg" customClass="RepositoryModuleTableViewController" customModule="RepositoryModule" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="1" sectionFooterHeight="1" id="q2A-ya-BdJ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -108,7 +108,7 @@
                     </tableView>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YgS-hc-58g" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <customObject id="Jc6-tY-yoV" customClass="RepositoryModuleInitalizer" customModule="RepositoriesModule">
+                <customObject id="Jc6-tY-yoV" customClass="RepositoryModuleInitalizer" customModule="RepositoryModule">
                     <connections>
                         <outlet property="repositoryModuleViewController" destination="fQ4-6F-Dfg" id="9GN-O1-P1m"/>
                     </connections>
@@ -119,7 +119,7 @@
         <!--Contributor Details View Controller-->
         <scene sceneID="eNn-DT-bVc">
             <objects>
-                <viewController storyboardIdentifier="ContributorDetailsViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="8Qv-gC-vRY" customClass="ContributorDetailsViewController" customModule="RepositoriesModule" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ContributorDetailsViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="8Qv-gC-vRY" customClass="ContributorDetailsViewController" customModule="RepositoryModule" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="zj0-KE-Mex">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -203,6 +203,7 @@
                     <connections>
                         <outlet property="imageView" destination="c9p-Gk-XSH" id="Ysc-tW-vo2"/>
                         <outlet property="nameLabel" destination="j2D-N0-1pY" id="RTL-Ki-KC0"/>
+                        <outlet property="seperatorDividorView" destination="2NP-si-PE7" id="pKi-vw-hFq"/>
                         <outlet property="totalCommitsLabel" destination="5CC-1C-NlS" id="OHd-l4-tgW"/>
                         <outlet property="weeksInfoTableView" destination="eoc-zC-aGo" id="HSI-4F-89d"/>
                     </connections>

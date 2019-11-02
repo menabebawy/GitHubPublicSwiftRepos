@@ -15,13 +15,14 @@ final class ContributorDetailsViewController: UIViewController {
     @IBOutlet weak private var nameLabel: UILabel!
     @IBOutlet weak private var totalCommitsLabel: UILabel!
     @IBOutlet weak private var weeksInfoTableView: UITableView!
+    @IBOutlet weak private var seperatorDividorView: UIView!
 
     var contributor: Contributor!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        imageView.layer.cornerRadius = imageView.frame.width / 2
-        imageView.layer.masksToBounds = true
+        seperatorDividorView.isHidden = true
+        imageView.makeCircle()
         nameLabel.text = contributor.author.login
         totalCommitsLabel.text = "\(contributor.total)"
         imageView.kf.setImage(with: URL(string: contributor.author.avatar_url))
@@ -46,4 +47,16 @@ extension ContributorDetailsViewController: UITableViewDataSource {
         return cell
     }
 
+}
+
+extension ContributorDetailsViewController: UIScrollViewDelegate {
+    func scrollViewDidScrollToTop(_ scrollView: UIScrollView) {
+        seperatorDividorView.isHidden = true
+    }
+
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        if scrollView.contentOffset.y != 0 {
+            seperatorDividorView.isHidden = false
+        }
+    }
 }

@@ -9,7 +9,7 @@
 import UIKit
 import Entities
 
-final class RepositoryModuleTableViewController: UITableViewController {
+public final class RepositoryModuleTableViewController: UITableViewController {
 
     private var numberOfItems: Int {
         return 4
@@ -26,7 +26,7 @@ final class RepositoryModuleTableViewController: UITableViewController {
 
     var viewToPresenterProtocol: RepositoryModulePresenter!
 
-    override func viewDidLoad() {
+    override public func viewDidLoad() {
         super.viewDidLoad()
         clearsSelectionOnViewWillAppear = false
         tableView.register(RightDetailsTableViewCell.self, forCellReuseIdentifier: "SizeCell")
@@ -38,11 +38,11 @@ final class RepositoryModuleTableViewController: UITableViewController {
 
     // MARK: - Table view data source
 
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return numberOfItems
     }
 
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    override public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let repository = repository else { return UITableViewCell() }
 
         var cell: UITableViewCell

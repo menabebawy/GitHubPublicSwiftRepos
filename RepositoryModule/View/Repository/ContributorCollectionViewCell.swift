@@ -15,8 +15,7 @@ final class ContributorCollectionViewCell: UICollectionViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        contributorImageView.layer.cornerRadius = contributorImageView.frame.size.width / 2
-        contributorImageView.layer.masksToBounds = true
+        contributorImageView.makeCircle()
     }
 
     func configureContributor(name: String, avatarUrlString: String) {

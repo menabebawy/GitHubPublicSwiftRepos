@@ -9,14 +9,21 @@
 import UIKit
 import Entities
 
-final class RepositoriesModuleViewController: UIViewController {
+public protocol RepositoriesModuleViewControllerDelegate: class {
+    func repositoriesModuleViewController(_ controller: RepositoriesModuleViewController,
+                                          didSelect repository: Repository)
+}
+
+public final class RepositoriesModuleViewController: UIViewController {
     @IBOutlet weak private var tableView: UITableView!
 
     private var repositories: [Repository] = []
 
     var viewToPresenterProtocol: RepositoriesModulePresenter!
 
-    override func viewDidLoad() {
+    weak public var delegate: RepositoriesModuleViewControllerDelegate?
+
+    override public func viewDidLoad() {
         super.viewDidLoad()
         viewToPresenterProtocol.fetchRepositories()
         title = "Swift Public Repos"
@@ -52,11 +59,11 @@ extension RepositoriesModuleViewController: RepositoriesModulePresenterToView {
 // MARK: - Table view data source
 
 extension RepositoriesModuleViewController: UITableViewDataSource {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return repositories.count
     }
 
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "RepositoryCell", for: indexPath)
         let repository = repositories[indexPath.row]
         cell.textLabel?.text = repository.name
@@ -69,8 +76,8 @@ extension RepositoriesModuleViewController: UITableViewDataSource {
 // MARK: - Table view delegate
 
 extension RepositoriesModuleViewController: UITableViewDelegate {
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        viewToPresenterProtocol.showRepositoryDetailsScreen(repositories[indexPath.row], from: self)
+    public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        delegate?.repositoriesModuleViewController(self, didSelect: repositories[indexPath.row])
     }
 
 }
@@ -78,7 +85,7 @@ extension RepositoriesModuleViewController: UITableViewDelegate {
 // MARK: - Table view prefeteching
 
 extension RepositoriesModuleViewController: UITableViewDataSourcePrefetching {
-    func tableView(_ tableView: UITableView, prefetchRowsAt indexPaths: [IndexPath]) {
+    public func tableView(_ tableView: UITableView, prefetchRowsAt indexPaths: [IndexPath]) {
         let isFetchMoreRepositories = indexPaths.contains(where: { $0.row == repositories.count - 1 })
         if isFetchMoreRepositories {
             viewToPresenterProtocol.fetchRepositories()

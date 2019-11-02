@@ -12,7 +12,6 @@ final class RepositoriesModulePresenter {
     weak var view: RepositoriesModulePresenterToView!
 
     var interactor: RepositoriesModulePresenterToInteractor!
-    var router: RepositoriesModulePresenterToRouter!
 
     var pageIndex = 0
     let perPage = 25
@@ -25,10 +24,6 @@ extension RepositoriesModulePresenter: RepositoriesModuleViewToPresenter {
     func fetchRepositories() {
         pageIndex += 1
         interactor.fetchRepositories(pageIndex: pageIndex, perPage: perPage)
-    }
-
-    func showRepositoryDetailsScreen(_ repository: Repository, from view: RepositoriesModulePresenterToView) {
-        router.openRepositoryDetailsScreen(repository, from: view)
     }
 
 }
