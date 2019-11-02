@@ -9,7 +9,7 @@
 import Foundation
 
 public struct Week: Codable {
-    public let startOfWeek: Int
+    public let startOfWeek: Double
     public let numberOfAdditions: Int
     public let numberOfDeletions: Int
     public let numberOfCommits: Int

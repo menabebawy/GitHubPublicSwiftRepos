@@ -25,7 +25,7 @@ final class ContributorDetailsViewController: UIViewController {
         nameLabel.text = contributor.author.login
         totalCommitsLabel.text = "\(contributor.total)"
         imageView.kf.setImage(with: URL(string: contributor.author.avatar_url))
-        weeksInfoTableView.register(UINib(nibName: "WeekInfoTableViewCell", bundle: .main), forCellReuseIdentifier: "WeekInfoCell")
+        weeksInfoTableView.register(WeekInfoTableViewCell.nib(), forCellReuseIdentifier: "WeekInfoCell")
     }
 
 }
@@ -38,8 +38,9 @@ extension ContributorDetailsViewController: UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "WeekInfoCell", for: indexPath) as? WeekInfoTableViewCell else {
-            return UITableViewCell()
+        guard let cell = tableView.dequeueReusableCell(
+            withIdentifier: "WeekInfoCell", for: indexPath) as? WeekInfoTableViewCell else {
+                return UITableViewCell()
         }
         cell.configure(week: contributor.weeks[indexPath.row])
         return cell

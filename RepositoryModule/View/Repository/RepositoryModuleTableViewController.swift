@@ -17,8 +17,10 @@ final class RepositoryModuleTableViewController: UITableViewController {
 
     public var repository: Repository? {
         didSet {
+            guard let repository = repository else { return }
+            title = repository.name
             tableView.reloadData()
-            viewToPresenterProtocol.showContributors(fullName: repository?.full_name ?? "")
+            viewToPresenterProtocol.showContributors(fullName: repository.full_name)
         }
     }
 
@@ -30,8 +32,7 @@ final class RepositoryModuleTableViewController: UITableViewController {
         tableView.register(RightDetailsTableViewCell.self, forCellReuseIdentifier: "SizeCell")
         tableView.register(RightDetailsTableViewCell.self, forCellReuseIdentifier: "StargazersCell")
         tableView.register(RightDetailsTableViewCell.self, forCellReuseIdentifier: "StargazersCell")
-        tableView.register(UINib(nibName: "ContributorsTableViewCell", bundle: .main),
-                           forCellReuseIdentifier: "ContributorsCell")
+        tableView.register(ContributorsTableViewCell.nib(), forCellReuseIdentifier: "ContributorsCell")
         tableView.tableFooterView = UIView()
     }
 
@@ -60,8 +61,9 @@ final class RepositoryModuleTableViewController: UITableViewController {
             cell.textLabel?.text = "Forks count"
             cell.detailTextLabel?.text = "\(repository.forks_count)"
         default:
-            guard let contributorsCell = tableView.dequeueReusableCell(withIdentifier: "ContributorsCell", for: indexPath) as? ContributorsTableViewCell else {
-                return UITableViewCell()
+            guard let contributorsCell = tableView.dequeueReusableCell(
+                withIdentifier: "ContributorsCell", for: indexPath) as? ContributorsTableViewCell else {
+                    return UITableViewCell()
             }
             cell = contributorsCell
         }

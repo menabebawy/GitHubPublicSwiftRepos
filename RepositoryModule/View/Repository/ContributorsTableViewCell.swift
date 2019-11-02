@@ -18,7 +18,8 @@ final class ContributorsTableViewCell: UITableViewCell {
 
     var contributors: [Contributor] = [] {
         didSet {
-            contributorsCollectionView.register(UINib(nibName: "ContributorCollectionViewCell", bundle: .main), forCellWithReuseIdentifier: "ContributorCell")
+            contributorsCollectionView.register(ContributorCollectionViewCell.nib(),
+                                                forCellWithReuseIdentifier: "ContributorCell")
             contributorsCollectionView.reloadData()
         }
     }

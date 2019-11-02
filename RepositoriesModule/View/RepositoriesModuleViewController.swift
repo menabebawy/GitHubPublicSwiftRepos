@@ -42,11 +42,9 @@ extension RepositoriesModuleViewController: RepositoriesModulePresenterToView {
     }
 
     func showErrorMessage() {
-        let alert = UIAlertController(title: "Alert",
-                                      message: "Problem Fetching repos",
-                                      preferredStyle: UIAlertController.Style.alert)
-        alert.addAction(UIAlertAction(title: "Okay", style: UIAlertAction.Style.default, handler: nil))
-        self.present(alert, animated: true, completion: nil)
+        let alert = UIAlertController(title: "Alert", message: "Problem Fetching repos", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Okay", style: .default, handler: nil))
+        present(alert, animated: true, completion: nil)
     }
 
 }
