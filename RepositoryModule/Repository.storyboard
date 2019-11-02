@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -113,7 +114,48 @@
                     </connections>
                 </customObject>
             </objects>
-            <point key="canvasLocation" x="89.855072463768124" y="64.955357142857139"/>
+            <point key="canvasLocation" x="-75" y="4"/>
+        </scene>
+        <!--Contributor Details View Controller-->
+        <scene sceneID="eNn-DT-bVc">
+            <objects>
+                <viewController storyboardIdentifier="ContributorDetailsViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="8Qv-gC-vRY" customClass="ContributorDetailsViewController" customModule="RepositoriesModule" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zj0-KE-Mex">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="c9p-Gk-XSH">
+                                <rect key="frame" x="138" y="60" width="138" height="138"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="c9p-Gk-XSH" secondAttribute="height" multiplier="1:1" id="yA9-Mk-Vgx"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j2D-N0-1pY">
+                                <rect key="frame" x="20" y="206" width="374" height="21"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="c9p-Gk-XSH" firstAttribute="centerX" secondItem="SYV-ER-Ir4" secondAttribute="centerX" id="B39-UR-TA4"/>
+                            <constraint firstItem="c9p-Gk-XSH" firstAttribute="top" secondItem="SYV-ER-Ir4" secondAttribute="top" constant="16" id="Ifp-9R-zUa"/>
+                            <constraint firstItem="j2D-N0-1pY" firstAttribute="top" secondItem="c9p-Gk-XSH" secondAttribute="bottom" constant="8" id="One-Fc-7mV"/>
+                            <constraint firstItem="c9p-Gk-XSH" firstAttribute="width" secondItem="SYV-ER-Ir4" secondAttribute="width" multiplier="1:3" id="b8R-yQ-O9B"/>
+                            <constraint firstItem="j2D-N0-1pY" firstAttribute="leading" secondItem="SYV-ER-Ir4" secondAttribute="leading" constant="20" id="e8u-Oe-tv5"/>
+                            <constraint firstItem="SYV-ER-Ir4" firstAttribute="trailing" secondItem="j2D-N0-1pY" secondAttribute="trailing" constant="20" id="mBw-Du-muR"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="SYV-ER-Ir4"/>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="c9p-Gk-XSH" id="Ysc-tW-vo2"/>
+                        <outlet property="nameLabel" destination="j2D-N0-1pY" id="RTL-Ki-KC0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yRh-kR-KDm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="850.72463768115949" y="4.0178571428571423"/>
         </scene>
     </scenes>
 </document>

@@ -9,6 +9,10 @@
 import UIKit
 import Entities
 
+protocol ContributorsTableViewCellDelegate: class {
+    func contributorsTableViewCell(_ cell: ContributorsTableViewCell, didSelect contributor: Owner)
+}
+
 final class ContributorsTableViewCell: UITableViewCell {
     @IBOutlet weak private var contributorsCollectionView: UICollectionView!
 
@@ -18,6 +22,8 @@ final class ContributorsTableViewCell: UITableViewCell {
             contributorsCollectionView.reloadData()
         }
     }
+
+    weak var delegate: ContributorsTableViewCellDelegate?
     
 }
 
@@ -42,6 +48,9 @@ extension ContributorsTableViewCell: UICollectionViewDataSource {
 
 // MARK: - Collection view delegate
 
-extension ContributorsTableViewCell: UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
+extension ContributorsTableViewCell: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        delegate?.contributorsTableViewCell(self, didSelect: contributors[indexPath.row])
+    }
 
 }

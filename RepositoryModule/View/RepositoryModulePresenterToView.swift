@@ -9,7 +9,6 @@
 import Entities
 
 protocol RepositoryModulePresenterToView: class {
-    func showRepository(_ repository: Repository)
     func showContributors(_ contributors: [Owner])
     func showErrorMessage()
 }

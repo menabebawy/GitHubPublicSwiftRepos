@@ -6,8 +6,9 @@
 //  Copyright © 2019 Bitpanda Test. All rights reserved.
 //
 
-import Foundation
+import Entities
 
 protocol RepositoryModuleViewToPresenter {
     func showContributors(fullName: String)
+    func showContributorDetails(_ contributor: Owner, from view: RepositoryModulePresenterToView)
 }

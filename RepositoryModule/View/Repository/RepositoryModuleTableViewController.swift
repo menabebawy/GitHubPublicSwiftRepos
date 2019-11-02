@@ -15,19 +15,10 @@ final class RepositoryModuleTableViewController: UITableViewController {
         return 4
     }
 
-    public var repository: Repository? = nil {
+    public var repository: Repository? {
         didSet {
             tableView.reloadData()
             viewToPresenterProtocol.showContributors(fullName: repository?.full_name ?? "")
-        }
-    }
-
-    private var contributors: [Owner]? = nil {
-        didSet {
-            guard let contributors = contributors else { return }
-            let indexPath = IndexPath(row: 3, section: 0)
-            let cell = tableView.cellForRow(at: indexPath) as? ContributorsTableViewCell
-            cell?.contributors = contributors
         }
     }
 
@@ -78,26 +69,28 @@ final class RepositoryModuleTableViewController: UITableViewController {
         return cell
     }
 
-    // MARK: - Table view delegate
-
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-
-    }
-
 }
 
 // MARK: - Repository module presenter to view
 
 extension RepositoryModuleTableViewController: RepositoryModulePresenterToView {
-    func showRepository(_ repository: Repository) {
-        self.repository = repository
-    }
-
     func showContributors(_ contributors: [Owner]) {
-        self.contributors = contributors
+        let contributorsIndexPath = IndexPath(row: 3, section: 0)
+        let cell = tableView.cellForRow(at: contributorsIndexPath) as? ContributorsTableViewCell
+        cell?.contributors = contributors
+        cell?.delegate = self
     }
 
     func showErrorMessage() {
+    }
+
+}
+
+// MARK: - Contributors table view cell delegate
+
+extension RepositoryModuleTableViewController: ContributorsTableViewCellDelegate {
+    func contributorsTableViewCell(_ cell: ContributorsTableViewCell, didSelect contributor: Owner) {
+        viewToPresenterProtocol.showContributorDetails(contributor, from: self)
     }
 
 }

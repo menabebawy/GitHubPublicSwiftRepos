@@ -9,5 +9,6 @@
 import Entities
 
 protocol RepositoryModulePresenterToRouter {
+    func presentContributorDetails(_ contributor: Owner, from view: RepositoryModulePresenterToView)
 }
 

@@ -21,6 +21,10 @@ extension RepositoryModulePresenter: RepositoryModuleViewToPresenter {
         interactor.fetchContributors(forRepositoryFullName: fullName)
     }
 
+    func showContributorDetails(_ contributor: Owner, from view: RepositoryModulePresenterToView) {
+        router.presentContributorDetails(contributor, from: view)
+    }
+
 }
 
 // MARK: - Repositories module interactor to presenter
