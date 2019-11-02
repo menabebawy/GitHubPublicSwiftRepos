@@ -10,13 +10,13 @@ import UIKit
 import Entities
 
 protocol ContributorsTableViewCellDelegate: class {
-    func contributorsTableViewCell(_ cell: ContributorsTableViewCell, didSelect contributor: Owner)
+    func contributorsTableViewCell(_ cell: ContributorsTableViewCell, didSelect contributor: Contributor)
 }
 
 final class ContributorsTableViewCell: UITableViewCell {
     @IBOutlet weak private var contributorsCollectionView: UICollectionView!
 
-    var contributors: [Owner] = [] {
+    var contributors: [Contributor] = [] {
         didSet {
             contributorsCollectionView.register(UINib(nibName: "ContributorCollectionViewCell", bundle: .main), forCellWithReuseIdentifier: "ContributorCell")
             contributorsCollectionView.reloadData()
@@ -39,7 +39,7 @@ extension ContributorsTableViewCell: UICollectionViewDataSource {
             return UICollectionViewCell()
         }
         let contributor = contributors[indexPath.row]
-        cell.configureContributor(name: contributor.login, avatarUrlString: contributor.avatar_url)
+        cell.configureContributor(name: contributor.author.login, avatarUrlString: contributor.author.avatar_url)
         return cell
     }
 

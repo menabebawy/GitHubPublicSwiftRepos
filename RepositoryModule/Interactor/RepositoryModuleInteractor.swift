@@ -19,7 +19,7 @@ final class RepositoryModuleInteractor {
 extension RepositoryModuleInteractor: RepositoryModulePresenterToInteractor {
     func fetchContributors(forRepositoryFullName fullName: String) {
         let service = GitHubService.contributors(fullname: fullName)
-        sessionProvider.request(type: [Owner].self, service: service) { [weak self] response in
+        sessionProvider.request(type: [Contributor].self, service: service) { [weak self] response in
             guard let `self` = self else { return }
             switch response {
             case let .success(contributors):

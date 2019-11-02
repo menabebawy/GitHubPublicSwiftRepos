@@ -35,7 +35,7 @@ final class RepositoryModuleRouter {
 // MARK: - Repositories module presenter to router
 
 extension RepositoryModuleRouter: RepositoryModulePresenterToRouter {
-    func presentContributorDetails(_ contributor: Owner, from view: RepositoryModulePresenterToView) {
+    func presentContributorDetails(_ contributor: Contributor, from view: RepositoryModulePresenterToView) {
         guard let view = view as? UIViewController,
             let contributorDetailsViewController = contributorDetailsViewController else { return }
         contributorDetailsViewController.contributor = contributor

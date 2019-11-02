@@ -10,5 +10,5 @@ import Entities
 
 protocol RepositoryModuleViewToPresenter {
     func showContributors(fullName: String)
-    func showContributorDetails(_ contributor: Owner, from view: RepositoryModulePresenterToView)
+    func showContributorDetails(_ contributor: Contributor, from view: RepositoryModulePresenterToView)
 }

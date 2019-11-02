@@ -25,7 +25,7 @@ public enum GitHubService: ServiceProtocol {
         case .repositories(_):
             return "search/repositories"
         case let .contributors(fullname):
-            return "repos/\(fullname)/contributors"
+            return "repos/\(fullname)/stats/contributors"
         }
     }
     

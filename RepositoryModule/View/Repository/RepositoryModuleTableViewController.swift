@@ -74,7 +74,7 @@ final class RepositoryModuleTableViewController: UITableViewController {
 // MARK: - Repository module presenter to view
 
 extension RepositoryModuleTableViewController: RepositoryModulePresenterToView {
-    func showContributors(_ contributors: [Owner]) {
+    func showContributors(_ contributors: [Contributor]) {
         let contributorsIndexPath = IndexPath(row: 3, section: 0)
         let cell = tableView.cellForRow(at: contributorsIndexPath) as? ContributorsTableViewCell
         cell?.contributors = contributors
@@ -89,7 +89,7 @@ extension RepositoryModuleTableViewController: RepositoryModulePresenterToView {
 // MARK: - Contributors table view cell delegate
 
 extension RepositoryModuleTableViewController: ContributorsTableViewCellDelegate {
-    func contributorsTableViewCell(_ cell: ContributorsTableViewCell, didSelect contributor: Owner) {
+    func contributorsTableViewCell(_ cell: ContributorsTableViewCell, didSelect contributor: Contributor) {
         viewToPresenterProtocol.showContributorDetails(contributor, from: self)
     }
 
