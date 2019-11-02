@@ -98,6 +98,10 @@
 		6AB9A249236DD0AF00C83367 /* UINib+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AB9A248236DD0AF00C83367 /* UINib+Extension.swift */; };
 		6AB9A25B236DF32200C83367 /* MainNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AB9A25A236DF32200C83367 /* MainNavigationController.swift */; };
 		6AB9A25E236DFC3100C83367 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AB9A25D236DFC3100C83367 /* UIView+Extension.swift */; };
+		6AB9A266236E04C100C83367 /* RepositoriesModuleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AB9A265236E04C100C83367 /* RepositoriesModuleTests.swift */; };
+		6AB9A268236E04C100C83367 /* RepositoriesModule.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A2E6818236C2EB000A319D1 /* RepositoriesModule.framework */; };
+		6AB9A277236E083100C83367 /* RepositoryModuleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AB9A276236E083100C83367 /* RepositoryModuleTests.swift */; };
+		6AB9A279236E083100C83367 /* RepositoryModule.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6AB2319A236C60F20036D147 /* RepositoryModule.framework */; };
 		6ADA95D5236C96410050B11E /* RepositoryModuleRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AB23201236C6CFC0036D147 /* RepositoryModuleRouter.swift */; };
 /* End PBXBuildFile section */
 
@@ -171,6 +175,27 @@
 			proxyType = 1;
 			remoteGlobalIDString = 6AB9A235236DCD5D00C83367;
 			remoteInfo = Utils;
+		};
+		6AB9A269236E04C100C83367 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6A9DF4D42368BA8900A09262 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6A2E6817236C2EB000A319D1;
+			remoteInfo = RepositoriesModule;
+		};
+		6AB9A26E236E061100C83367 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6A9DF4D42368BA8900A09262 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6A9DF4DB2368BA8900A09262;
+			remoteInfo = GitHubPublicSwiftRepos;
+		};
+		6AB9A27A236E083100C83367 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6A9DF4D42368BA8900A09262 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6AB23199236C60F20036D147;
+			remoteInfo = RepositoryModule;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -293,6 +318,12 @@
 		6AB9A248236DD0AF00C83367 /* UINib+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINib+Extension.swift"; sourceTree = "<group>"; };
 		6AB9A25A236DF32200C83367 /* MainNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavigationController.swift; sourceTree = "<group>"; };
 		6AB9A25D236DFC3100C83367 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		6AB9A263236E04C100C83367 /* RepositoriesModuleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RepositoriesModuleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6AB9A265236E04C100C83367 /* RepositoriesModuleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoriesModuleTests.swift; sourceTree = "<group>"; };
+		6AB9A267236E04C100C83367 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6AB9A274236E083100C83367 /* RepositoryModuleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RepositoryModuleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6AB9A276236E083100C83367 /* RepositoryModuleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryModuleTests.swift; sourceTree = "<group>"; };
+		6AB9A278236E083100C83367 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -349,6 +380,22 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6AB9A260236E04C100C83367 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6AB9A268236E04C100C83367 /* RepositoriesModule.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6AB9A271236E083100C83367 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6AB9A279236E083100C83367 /* RepositoryModule.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -509,7 +556,9 @@
 			children = (
 				6A9DF4DE2368BA8900A09262 /* GitHubPublicSwiftRepos */,
 				6A2E6819236C2EB000A319D1 /* RepositoriesModule */,
+				6AB9A264236E04C100C83367 /* RepositoriesModuleTests */,
 				6AB2319B236C60F20036D147 /* RepositoryModule */,
+				6AB9A275236E083100C83367 /* RepositoryModuleTests */,
 				6A2E67DA236B711F00A319D1 /* Networking */,
 				6A540FAE236C3553001A87FB /* Entities */,
 				6AB9A237236DCD5D00C83367 /* Utils */,
@@ -527,6 +576,8 @@
 				6A540FAD236C3553001A87FB /* Entities.framework */,
 				6AB2319A236C60F20036D147 /* RepositoryModule.framework */,
 				6AB9A236236DCD5D00C83367 /* Utils.framework */,
+				6AB9A263236E04C100C83367 /* RepositoriesModuleTests.xctest */,
+				6AB9A274236E083100C83367 /* RepositoryModuleTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -617,6 +668,24 @@
 				6AB9A25D236DFC3100C83367 /* UIView+Extension.swift */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		6AB9A264236E04C100C83367 /* RepositoriesModuleTests */ = {
+			isa = PBXGroup;
+			children = (
+				6AB9A265236E04C100C83367 /* RepositoriesModuleTests.swift */,
+				6AB9A267236E04C100C83367 /* Info.plist */,
+			);
+			path = RepositoriesModuleTests;
+			sourceTree = "<group>";
+		};
+		6AB9A275236E083100C83367 /* RepositoryModuleTests */ = {
+			isa = PBXGroup;
+			children = (
+				6AB9A276236E083100C83367 /* RepositoryModuleTests.swift */,
+				6AB9A278236E083100C83367 /* Info.plist */,
+			);
+			path = RepositoryModuleTests;
 			sourceTree = "<group>";
 		};
 		A523924548AA7A8724A4F749 /* Frameworks */ = {
@@ -802,6 +871,43 @@
 			productReference = 6AB9A236236DCD5D00C83367 /* Utils.framework */;
 			productType = "com.apple.product-type.framework";
 		};
+		6AB9A262236E04C100C83367 /* RepositoriesModuleTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6AB9A26B236E04C100C83367 /* Build configuration list for PBXNativeTarget "RepositoriesModuleTests" */;
+			buildPhases = (
+				6AB9A25F236E04C100C83367 /* Sources */,
+				6AB9A260236E04C100C83367 /* Frameworks */,
+				6AB9A261236E04C100C83367 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6AB9A26A236E04C100C83367 /* PBXTargetDependency */,
+				6AB9A26F236E061100C83367 /* PBXTargetDependency */,
+			);
+			name = RepositoriesModuleTests;
+			productName = RepositoriesModuleTests;
+			productReference = 6AB9A263236E04C100C83367 /* RepositoriesModuleTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		6AB9A273236E083100C83367 /* RepositoryModuleTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6AB9A27C236E083100C83367 /* Build configuration list for PBXNativeTarget "RepositoryModuleTests" */;
+			buildPhases = (
+				6AB9A270236E083100C83367 /* Sources */,
+				6AB9A271236E083100C83367 /* Frameworks */,
+				6AB9A272236E083100C83367 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6AB9A27B236E083100C83367 /* PBXTargetDependency */,
+			);
+			name = RepositoryModuleTests;
+			productName = RepositoryModuleTests;
+			productReference = 6AB9A274236E083100C83367 /* RepositoryModuleTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -832,6 +938,13 @@
 						CreatedOnToolsVersion = 11.0;
 						LastSwiftMigration = 1100;
 					};
+					6AB9A262236E04C100C83367 = {
+						CreatedOnToolsVersion = 11.0;
+						TestTargetID = 6A9DF4DB2368BA8900A09262;
+					};
+					6AB9A273236E083100C83367 = {
+						CreatedOnToolsVersion = 11.0;
+					};
 				};
 			};
 			buildConfigurationList = 6A9DF4D72368BA8900A09262 /* Build configuration list for PBXProject "GitHubPublicSwiftRepos" */;
@@ -852,7 +965,9 @@
 			targets = (
 				6A9DF4DB2368BA8900A09262 /* GitHubPublicSwiftRepos */,
 				6A2E6817236C2EB000A319D1 /* RepositoriesModule */,
+				6AB9A262236E04C100C83367 /* RepositoriesModuleTests */,
 				6AB23199236C60F20036D147 /* RepositoryModule */,
+				6AB9A273236E083100C83367 /* RepositoryModuleTests */,
 				6A540FAC236C3553001A87FB /* Entities */,
 				6A2E67D8236B711F00A319D1 /* Networking */,
 				6AB9A235236DCD5D00C83367 /* Utils */,
@@ -911,6 +1026,20 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		6AB9A234236DCD5D00C83367 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6AB9A261236E04C100C83367 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6AB9A272236E083100C83367 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -1010,6 +1139,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		6AB9A25F236E04C100C83367 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6AB9A266236E04C100C83367 /* RepositoriesModuleTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6AB9A270236E083100C83367 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6AB9A277236E083100C83367 /* RepositoryModuleTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -1062,6 +1207,21 @@
 			isa = PBXTargetDependency;
 			target = 6AB9A235236DCD5D00C83367 /* Utils */;
 			targetProxy = 6AB9A246236DCEEC00C83367 /* PBXContainerItemProxy */;
+		};
+		6AB9A26A236E04C100C83367 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6A2E6817236C2EB000A319D1 /* RepositoriesModule */;
+			targetProxy = 6AB9A269236E04C100C83367 /* PBXContainerItemProxy */;
+		};
+		6AB9A26F236E061100C83367 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6A9DF4DB2368BA8900A09262 /* GitHubPublicSwiftRepos */;
+			targetProxy = 6AB9A26E236E061100C83367 /* PBXContainerItemProxy */;
+		};
+		6AB9A27B236E083100C83367 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6AB23199236C60F20036D147 /* RepositoryModule */;
+			targetProxy = 6AB9A27A236E083100C83367 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -1509,6 +1669,76 @@
 			};
 			name = Release;
 		};
+		6AB9A26C236E04C100C83367 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = RepositoriesModuleTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.mena.RepositoriesModuleTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GitHubPublicSwiftRepos.app/GitHubPublicSwiftRepos";
+			};
+			name = Debug;
+		};
+		6AB9A26D236E04C100C83367 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = RepositoriesModuleTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.mena.RepositoriesModuleTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GitHubPublicSwiftRepos.app/GitHubPublicSwiftRepos";
+			};
+			name = Release;
+		};
+		6AB9A27D236E083100C83367 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = RepositoryModuleTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.mena.RepositoryModuleTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		6AB9A27E236E083100C83367 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = RepositoryModuleTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.mena.RepositoryModuleTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1571,6 +1801,24 @@
 			buildConfigurations = (
 				6AB9A240236DCD5D00C83367 /* Debug */,
 				6AB9A241236DCD5D00C83367 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6AB9A26B236E04C100C83367 /* Build configuration list for PBXNativeTarget "RepositoriesModuleTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6AB9A26C236E04C100C83367 /* Debug */,
+				6AB9A26D236E04C100C83367 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6AB9A27C236E083100C83367 /* Build configuration list for PBXNativeTarget "RepositoryModuleTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6AB9A27D236E083100C83367 /* Debug */,
+				6AB9A27E236E083100C83367 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

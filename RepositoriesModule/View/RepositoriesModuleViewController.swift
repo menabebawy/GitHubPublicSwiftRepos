@@ -14,7 +14,7 @@ public protocol RepositoriesModuleViewControllerDelegate: class {
                                           didSelect repository: Repository)
 }
 
-public final class RepositoriesModuleViewController: UIViewController {
+public class RepositoriesModuleViewController: UIViewController {
     @IBOutlet weak private var tableView: UITableView!
 
     private var repositories: [Repository] = []
@@ -25,6 +25,7 @@ public final class RepositoriesModuleViewController: UIViewController {
 
     override public func viewDidLoad() {
         super.viewDidLoad()
+        tableView.tableFooterView = UIView()
         viewToPresenterProtocol.fetchRepositories()
         title = "Swift Public Repos"
     }

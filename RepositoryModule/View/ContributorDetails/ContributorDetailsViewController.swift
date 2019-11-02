@@ -49,14 +49,10 @@ extension ContributorDetailsViewController: UITableViewDataSource {
 
 }
 
-extension ContributorDetailsViewController: UIScrollViewDelegate {
-    func scrollViewDidScrollToTop(_ scrollView: UIScrollView) {
-        seperatorDividorView.isHidden = true
-    }
+// MARK: - Scroll view delegate
 
+extension ContributorDetailsViewController: UIScrollViewDelegate {
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        if scrollView.contentOffset.y != 0 {
-            seperatorDividorView.isHidden = false
-        }
+        seperatorDividorView.isHidden = scrollView.contentOffset.y != 0 ? false : true
     }
 }

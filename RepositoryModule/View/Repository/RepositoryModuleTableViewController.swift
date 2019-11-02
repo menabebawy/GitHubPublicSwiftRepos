@@ -9,7 +9,7 @@
 import UIKit
 import Entities
 
-public final class RepositoryModuleTableViewController: UITableViewController {
+public class RepositoryModuleTableViewController: UITableViewController {
 
     private var numberOfItems: Int {
         return 4
