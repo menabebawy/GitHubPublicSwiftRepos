@@ -16,7 +16,6 @@ public final class DateFormatterBuilder {
         self.timeStamp = timeStamp
     }
 
-
     /// Use  it on formatting week info for contributor commits 
     public func medium() -> DateFormatterBuilder {
         let date = Date(timeIntervalSince1970: timeStamp)

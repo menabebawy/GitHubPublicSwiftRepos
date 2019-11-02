@@ -25,7 +25,7 @@ final class ContributorsTableViewCell: UITableViewCell {
     }
 
     weak var delegate: ContributorsTableViewCellDelegate?
-    
+
 }
 
 // MARK: - Collectio view data source
@@ -35,15 +35,16 @@ extension ContributorsTableViewCell: UICollectionViewDataSource {
         return contributors.count
     }
 
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ContributorCell", for: indexPath) as? ContributorCollectionViewCell else {
-            return UICollectionViewCell()
+    func collectionView(_ collectionView: UICollectionView,
+                        cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        guard let cell = collectionView.dequeueReusableCell(
+            withReuseIdentifier: "ContributorCell", for: indexPath) as? ContributorCollectionViewCell else {
+                return UICollectionViewCell()
         }
         let contributor = contributors[indexPath.row]
-        cell.configureContributor(name: contributor.author.login, avatarUrlString: contributor.author.avatar_url)
+        cell.configureContributor(name: contributor.author.login, avatarUrlString: contributor.author.avatarUrl)
         return cell
     }
-
 
 }
 

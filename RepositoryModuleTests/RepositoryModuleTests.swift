@@ -30,9 +30,10 @@ class RepositoryModuleTests: XCTestCase {
         XCTAssertNotNil(presenter.view,
                         "view in AuthenticationModulePresenter is nil after configuration")
 
-        let interactor: RepositoryModuleInteractor = presenter.interactor as! RepositoryModuleInteractor
-        XCTAssertNotNil(interactor.interactorToPresenterProtocol,
-                        "output in AuthenticationModuleInteractor is nil after configuration")
+        if let interactor: RepositoryModuleInteractor = presenter.interactor as? RepositoryModuleInteractor {
+            XCTAssertNotNil(interactor.interactorToPresenterProtocol,
+                            "output in AuthenticationModuleInteractor is nil after configuration")
+        }
     }
 
 }

@@ -11,4 +11,3 @@ import Entities
 protocol RepositoryModulePresenterToRouter {
     func presentContributorDetails(_ contributor: Contributor, from view: RepositoryModulePresenterToView)
 }
-

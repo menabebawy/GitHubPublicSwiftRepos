@@ -19,10 +19,10 @@ final class RepositoriesModuleConfigurator {
     private func configure(viewController: RepositoriesModuleViewController) {
         let presenter = RepositoriesModulePresenter()
         presenter.view = viewController
-        
+
         let interactor = RepositoriesModuleInteractor()
         interactor.interactorToPresenterProtocol = presenter
-        
+
         presenter.interactor = interactor
         viewController.viewToPresenterProtocol = presenter
     }

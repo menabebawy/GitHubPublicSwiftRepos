@@ -25,7 +25,7 @@ final class ContributorDetailsViewController: UIViewController {
         imageView.makeCircle()
         nameLabel.text = contributor.author.login
         totalCommitsLabel.text = "\(contributor.total)"
-        imageView.kf.setImage(with: URL(string: contributor.author.avatar_url))
+        imageView.kf.setImage(with: URL(string: contributor.author.avatarUrl))
         weeksInfoTableView.register(WeekInfoTableViewCell.nib(), forCellReuseIdentifier: "WeekInfoCell")
     }
 

@@ -11,4 +11,3 @@ import Entities
 protocol RepositoriesModuleViewToPresenter {
     func fetchRepositories()
 }
-

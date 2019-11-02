@@ -9,6 +9,11 @@
 import Foundation
 
 public struct Repositories: Codable {
-    public let total_count: Int
+    public let totalCount: Int
     public let items: [Repository]
+
+    public enum CodingKeys: String, CodingKey {
+        case totalCount = "total_count"
+        case items = "items"
+    }
 }

@@ -14,7 +14,7 @@ public struct Week: Codable {
     public let numberOfDeletions: Int
     public let numberOfCommits: Int
 
-    public enum CodingKeys : String, CodingKey {
+    public enum CodingKeys: String, CodingKey {
         case startOfWeek = "w"
         case numberOfAdditions = "a"
         case numberOfDeletions = "d"

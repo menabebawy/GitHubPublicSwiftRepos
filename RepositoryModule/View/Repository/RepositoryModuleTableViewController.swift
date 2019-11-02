@@ -20,7 +20,7 @@ public class RepositoryModuleTableViewController: UITableViewController {
             guard let repository = repository else { return }
             title = repository.name
             tableView.reloadData()
-            viewToPresenterProtocol.showContributors(fullName: repository.full_name)
+            viewToPresenterProtocol.showContributors(fullName: repository.fullName)
         }
     }
 
@@ -55,11 +55,11 @@ public class RepositoryModuleTableViewController: UITableViewController {
         case 1:
             cell = tableView.dequeueReusableCell(withIdentifier: "StargazersCell", for: indexPath)
             cell.textLabel?.text = "Stargazers"
-            cell.detailTextLabel?.text = "\(repository.stargazers_count)"
+            cell.detailTextLabel?.text = "\(repository.stargazersCount)"
         case 2:
             cell = tableView.dequeueReusableCell(withIdentifier: "StargazersCell", for: indexPath)
             cell.textLabel?.text = "Forks count"
-            cell.detailTextLabel?.text = "\(repository.forks_count)"
+            cell.detailTextLabel?.text = "\(repository.forksCount)"
         default:
             guard let contributorsCell = tableView.dequeueReusableCell(
                 withIdentifier: "ContributorsCell", for: indexPath) as? ContributorsTableViewCell else {

@@ -10,7 +10,7 @@ import Foundation
 
 final class RepositoryModuleConfigurator {
 
-    func configureModuleForViewInput<UITableViewController>(viewInput: UITableViewController) {
+    func configureModuleForViewInput<T>(viewInput: T) {
         if let viewController = viewInput as? RepositoryModuleTableViewController {
             configure(viewController: viewController)
         }
@@ -18,14 +18,14 @@ final class RepositoryModuleConfigurator {
 
     private func configure(viewController: RepositoryModuleTableViewController) {
         let router = RepositoryModuleRouter()
-        
+
         let presenter = RepositoryModulePresenter()
         presenter.view = viewController
         presenter.router = router
-        
+
         let interactor = RepositoryModuleInteractor()
         interactor.interactorToPresenterProtocol = presenter
-        
+
         presenter.interactor = interactor
         viewController.viewToPresenterProtocol = presenter
     }

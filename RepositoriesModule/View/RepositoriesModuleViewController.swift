@@ -68,7 +68,7 @@ extension RepositoriesModuleViewController: UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "RepositoryCell", for: indexPath)
         let repository = repositories[indexPath.row]
         cell.textLabel?.text = repository.name
-        cell.detailTextLabel?.text = repository.full_name
+        cell.detailTextLabel?.text = repository.fullName
         return cell
     }
 

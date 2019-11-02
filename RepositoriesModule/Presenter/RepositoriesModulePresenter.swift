@@ -32,7 +32,8 @@ extension RepositoriesModulePresenter: RepositoriesModuleViewToPresenter {
 
 extension RepositoriesModulePresenter: RepositoriesModuleInteractorToPresenter {
     func fetched(repositories: [Repository]) {
-        pageIndex == 1 ? view.reloadTableView(by: repositories) : view.updateTableView(by: repositories, perPage: perPage)
+        pageIndex == 1 ? view.reloadTableView(by: repositories) :
+            view.updateTableView(by: repositories, perPage: perPage)
     }
 
     func failedToFetchRepositories(error: Error) {

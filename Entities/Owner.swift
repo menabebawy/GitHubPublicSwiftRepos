@@ -10,5 +10,11 @@ import Foundation
 
 public struct Owner: Codable {
     public let login: String
-    public let avatar_url: String
+    public let avatarUrl: String
+
+    public enum CodingKeys: String, CodingKey {
+        case login = "login"
+        case avatarUrl = "avatar_url"
+    }
+
 }

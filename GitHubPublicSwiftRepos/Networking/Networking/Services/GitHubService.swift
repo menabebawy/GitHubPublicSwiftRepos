@@ -17,22 +17,22 @@ public enum GitHubService: ServiceProtocol {
     public var baseURL: URL {
         return URL(string: "https://api.github.com/")!
     }
-    
+
     public var path: String {
         switch self {
         case let .repository(id):
             return "repositories/\(id)"
-        case .repositories(_):
+        case .repositories:
             return "search/repositories"
         case let .contributors(fullname):
             return "repos/\(fullname)/contributors"
         }
     }
-    
+
     public var method: HTTPMethod {
         return .get
     }
-    
+
     public var task: Task {
         switch self {
         case .repository:
@@ -49,11 +49,11 @@ public enum GitHubService: ServiceProtocol {
             return .requestPlain
         }
     }
-    
+
     public var headers: Headers? {
         return nil
     }
-    
+
     public var parametersEncoding: ParametersEncoding {
         return .url
     }
