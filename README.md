@@ -18,7 +18,7 @@ Swift Packages is used for package dependencies so there is no need to use cocoa
 Clone then run :rocket::rocket:
 
 ## Demo
-![](Demo/github-public-swift-repos.gif)
+![](Demo/demo.gif)
 
 ## Networking
 
