@@ -15,15 +15,15 @@ These instructions will get you a copy of the project up and running on your loc
 
 Swift Packages is used for package dependencies so there is not need to use 3rd partris such as cocoapods
 
-### Network Layer
+## Network Layer
 
 Use native [Network Layer](https://github.com/marcinjackowski/NetworkLayer), thanks  [Marcin Jackowski](https://github.com/marcinjackowski) for such great work
 
-### Architecture
+## Architecture
 
 Follow VIPER
 
-### Demo
+## Demo
 
 
 
