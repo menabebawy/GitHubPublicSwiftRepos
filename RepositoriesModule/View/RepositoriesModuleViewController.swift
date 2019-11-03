@@ -30,11 +30,22 @@ public class RepositoriesModuleViewController: UIViewController {
         title = "Swift Public Repos"
     }
 
+    override public func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        viewToPresenterProtocol.viewWillAppear()
+    }
+
 }
 
 // MARK: - Repositories module presenter to view
 
 extension RepositoriesModuleViewController: RepositoriesModulePresenterToView {
+    func viewWillAppear() {
+        if let index = tableView.indexPathForSelectedRow {
+            tableView.deselectRow(at: index, animated: true)
+        }
+    }
+
     func reloadTableView(by repositories: [Repository]) {
         self.repositories.append(contentsOf: repositories)
         tableView.reloadData()

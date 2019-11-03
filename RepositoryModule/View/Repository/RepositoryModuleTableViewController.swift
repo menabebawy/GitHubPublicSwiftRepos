@@ -68,6 +68,7 @@ public class RepositoryModuleTableViewController: UITableViewController {
             cell = contributorsCell
         }
 
+        cell.selectionStyle = .none
         return cell
     }
 

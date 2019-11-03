@@ -26,6 +26,10 @@ extension RepositoriesModulePresenter: RepositoriesModuleViewToPresenter {
         interactor.fetchRepositories(pageIndex: pageIndex, perPage: perPage)
     }
 
+    func viewWillAppear() {
+        view.viewWillAppear()
+    }
+
 }
 
 // MARK: - Repositories module interactor to presenter
