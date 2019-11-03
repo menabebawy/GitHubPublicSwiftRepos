@@ -1,9 +1,9 @@
 //
 //  Repository.swift
-//  Bitpanda Task
+//  GitHubPublicSwiftRepos
 //
 //  Created by Mena Yousif on 10/29/19.
-//  Copyright © 2019 Bitpanda Task. All rights reserved.
+//  Copyright © 2019 Mena Soft. All rights reserved.
 //
 
 import Foundation

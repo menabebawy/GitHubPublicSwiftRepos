@@ -916,7 +916,7 @@
 			attributes = {
 				LastSwiftUpdateCheck = 1100;
 				LastUpgradeCheck = 1100;
-				ORGANIZATIONNAME = "Bitpanda Test";
+				ORGANIZATIONNAME = "Mena Soft";
 				TargetAttributes = {
 					6A2E67D8236B711F00A319D1 = {
 						CreatedOnToolsVersion = 11.0;
