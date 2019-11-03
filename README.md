@@ -7,7 +7,7 @@ Display the list of ALL public repositories written using the Swift language
 ### Prerequisites
 
 - Xcode 11
-- iOS13 as contributor details screens doesn't have any kind of dismissing buttons. It depends on swiping down which is produced from iOS13
+- iOS13 as contributor details screen doesn't have any kind of buttons to dismiss. It depends on swiping down which is produced from iOS13
 
 ### Installing
 
